@@ -1,0 +1,30 @@
+{
+	"name": "darkling/invoice",
+	"description": "Component for generating invoices using Nette Framework and mPDF library.",
+	"keywords": ["invoice", "generator", "nette", "latte", "mpdf"],
+	"license": "BSD-3",
+	"authors": [
+		{
+			"name": "Ondřej Brejla",
+			"email": "ondrej@brejla.cz",
+			"homepage": "http://brejla.cz"
+		},
+		{
+			"name": "Jan Vaňura",
+			"email": "jano.vano@gmail.com",
+			"homepage": "http://janvanura.cz"
+		}
+	],
+	"require": {
+		"php": ">=5.6",
+		"nette/application": "^2.3",
+		"nette/di": "^2.3",
+		"latte/latte": "^2.3",
+		"mpdf/mpdf": "~v6.1.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"Darkling\\": "src/"
+		}
+	}
+}
