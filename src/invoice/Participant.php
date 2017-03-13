@@ -18,6 +18,9 @@ class Participant
 	private $name;
 
 	/** @var string */
+	private $company;
+
+	/** @var string */
 	private $street;
 
 	/** @var string */
@@ -215,4 +218,24 @@ class Participant
 		$this->accountNumber = $accountNumber;
 		return $this;
 	}
+
+	/**
+	 * @return string
+	 */
+	public function getCompany()
+	{
+		return $this->company;
+	}
+
+	/**
+	 * @param string $company
+	 * @return self
+	 */
+	public function setCompany($company)
+	{
+		$this->company = $company;
+		return $this;
+	}
+
+
 }
