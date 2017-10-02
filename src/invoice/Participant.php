@@ -38,6 +38,9 @@ class Participant
 	/** @var string */
 	private $accountNumber;
 
+	/** @var string */
+	private $country;
+
 	/**
 	 * Initializes the Participant
 	 *
@@ -213,6 +216,24 @@ class Participant
 	public function setAccountNumber($accountNumber)
 	{
 		$this->accountNumber = $accountNumber;
+		return $this;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getCountry()
+	{
+		return $this->country;
+	}
+
+	/**
+	 * @param string $country
+	 * @return Participant
+	 */
+	public function setCountry($country)
+	{
+		$this->country = $country;
 		return $this;
 	}
 }

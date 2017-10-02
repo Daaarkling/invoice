@@ -78,6 +78,9 @@
 							<tr>
 								<td>{$customerCity}, {$customerZip}</td>
 							</tr>
+							<tr n:if="$customerCountry">
+								<td>{$customerCountry}</td>
+							</tr>
 							<tr n:if="$customerIn">
 								<td>IČ: {$customerIn}</td>
 							</tr>
@@ -115,6 +118,9 @@
 							</tr>
 							<tr>
 								<td>{$supplierCity}, {$supplierZip}</td>
+							</tr>
+							<tr n:if="$supplierCountry">
+								<td>{$supplierCountry}</td>
 							</tr>
 							<tr n:if="$supplierIn">
 								<td><br>IČ: {$supplierIn}</td>
