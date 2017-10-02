@@ -44,6 +44,9 @@ class Participant
 	/** @var string */
 	private $country;
 
+	/** @var array */
+	private $extra = [];
+
 
 	/**
 	 * Initializes the Participant
@@ -61,6 +64,16 @@ class Participant
 		$this->houseNumber = $houseNumber;
 		$this->city = $city;
 		$this->zip = $zip;
+	}
+
+
+	/**
+	 * @param string $key
+	 * @param string $value
+	 */
+	public function addExtra($key, $value)
+	{
+		$this->extra[$key] = $value;
 	}
 
 	/**
@@ -257,6 +270,22 @@ class Participant
 	{
 		$this->country = $country;
 		return $this;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function getExtra()
+	{
+		return $this->extra;
+	}
+
+	/**
+	 * @param array $extra
+	 */
+	public function setExtra($extra)
+	{
+		$this->extra = $extra;
 	}
 
 }

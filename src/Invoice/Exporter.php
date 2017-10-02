@@ -116,6 +116,11 @@ class Exporter
 		$template->supplierAccountNumber = $supplier->getAccountNumber();
 		$template->supplierCompany = $supplier->getCompany();
 		$template->supplierCountry = $supplier->getCountry();
+
+		foreach ($supplier->getExtra() as $key => $value) {
+			$keyName = 'supplier' . ucfirst($key);
+			$template->$keyName = $value;
+		}
 	}
 
 	/**
@@ -137,6 +142,11 @@ class Exporter
 		$template->customerAccountNumber = $customer->getAccountNumber();
 		$template->customerCompany = $customer->getCompany();
 		$template->customerCountry = $customer->getCountry();
+
+		foreach ($customer->getExtra() as $key => $value) {
+			$keyName = 'customer' . ucfirst($key);
+			$template->$keyName = $value;
+		}
 	}
 
 	/**
