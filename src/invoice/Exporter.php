@@ -114,6 +114,7 @@ class Exporter
 		$template->supplierIn = $supplier->getIn();
 		$template->supplierTin = $supplier->getTin();
 		$template->supplierAccountNumber = $supplier->getAccountNumber();
+		$template->supplierCompany = $supplier->getCompany();
 		$template->supplierCountry = $supplier->getCountry();
 	}
 
@@ -134,6 +135,7 @@ class Exporter
 		$template->customerIn = $customer->getIn();
 		$template->customerTin = $customer->getTin();
 		$template->customerAccountNumber = $customer->getAccountNumber();
+		$template->customerCompany = $customer->getCompany();
 		$template->customerCountry = $customer->getCountry();
 	}
 

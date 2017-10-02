@@ -66,7 +66,7 @@
 						<table style="width: 500px;" cellpadding="1">
 							<tr>
 								<td style="text-align: left; border-bottom: 1px solid black; font-weight: bold; font-size: 14px;">
-									Odběratel
+									Kupující
 								</td>
 							</tr>
 							<tr>
@@ -76,7 +76,7 @@
 								<td>{$customerStreet} {$customerHouseNumber}</td>
 							</tr>
 							<tr>
-								<td>{$customerCity}, {$customerZip}</td>
+								<td>{$customerZip} {$customerCity}</td>
 							</tr>
 							<tr n:if="$customerCountry">
 								<td>{$customerCountry}</td>
@@ -89,25 +89,13 @@
 							</tr>
 						</table>
 					</td>
-					<td style="width: 50%; vertical-align: top;">
-						<table style="width: 500px;" cellpadding="1">
-							<tr>
-								<td style="text-align: left; border-bottom: 1px solid black; font-weight: bold; font-size: 14px;">
-									Adresa doručení
-								</td>
-							</tr>
-							<tr>
-								<td>Česká Republika</td>
-							</tr>
-						</table>
-					</td>
 				</tr>
 				<tr>
 					<td style="width: 50%; vertical-align: top;">
 						<table style="width: 500px;" cellpadding="1">
 							<tr>
 								<td style="text-align: left; border-bottom: 1px solid black; font-weight: bold; font-size: 14px;">
-									Dodavatel
+									Prodejce
 								</td>
 							</tr>
 							<tr>
@@ -117,7 +105,7 @@
 								<td>{$supplierStreet} {$supplierHouseNumber}</td>
 							</tr>
 							<tr>
-								<td>{$supplierCity}, {$supplierZip}</td>
+								<td>{$supplierZip}{$supplierCity}</td>
 							</tr>
 							<tr n:if="$supplierCountry">
 								<td>{$supplierCountry}</td>

@@ -18,6 +18,9 @@ class Participant
 	private $name;
 
 	/** @var string */
+	private $company;
+
+	/** @var string */
 	private $street;
 
 	/** @var string */
@@ -40,6 +43,7 @@ class Participant
 
 	/** @var string */
 	private $country;
+
 
 	/**
 	 * Initializes the Participant
@@ -222,6 +226,24 @@ class Participant
 	/**
 	 * @return string
 	 */
+	public function getCompany()
+	{
+		return $this->company;
+	}
+
+	/**
+	 * @param string $company
+	 * @return self
+	 */
+	public function setCompany($company)
+	{
+		$this->company = $company;
+		return $this;
+	}
+
+	/**
+	 * @return string
+	 */
 	public function getCountry()
 	{
 		return $this->country;
@@ -236,4 +258,5 @@ class Participant
 		$this->country = $country;
 		return $this;
 	}
+
 }

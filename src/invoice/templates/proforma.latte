@@ -76,7 +76,10 @@
                         <td>{$customerStreet}</td>
                     </tr>
                     <tr>
-                        <td>{$customerCity}, {$customerZip}</td>
+                        <td>{$customerZip}{$customerCity}</td>
+                    </tr>
+                    <tr n:if="$customerCountry">
+                        <td>{$customerCountry}</td>
                     </tr>
                     {if $customerCompany || $customerIn}
                         <tr n:if="$customerIn">
@@ -86,18 +89,6 @@
                             <td>DIČ: {$customerTin}</td>
                         </tr>
                     {/if}
-                </table>
-            </td>
-            <td style="width: 50%; vertical-align: top;">
-                <table style="width: 500px;" cellpadding="1">
-                    <tr>
-                        <td style="text-align: left; border-bottom: 1px solid black; font-weight: bold; font-size: 14px;">
-                            Adresa doručení
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Česká Republika</td>
-                    </tr>
                 </table>
             </td>
         </tr>
@@ -116,7 +107,10 @@
                         <td>{$supplierStreet} {$supplierHouseNumber}</td>
                     </tr>
                     <tr>
-                        <td>{$supplierCity}, {$supplierZip}</td>
+                        <td>{$supplierZip}{$supplierCity}</td>
+                    </tr>
+                    <tr n:if="$supplierCountry">
+                        <td>{$supplierCountry}</td>
                     </tr>
                     <tr n:if="$supplierIn">
                         <td><br>IČ: {$supplierIn}</td>
