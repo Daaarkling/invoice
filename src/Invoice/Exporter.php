@@ -65,7 +65,7 @@ class Exporter
 		}
 
 		$this->generate($this->template);
-		$mPDF = new mPDF('utf-8');
+		$mPDF = new \Mpdf\Mpdf(['tempDir' => __DIR__ . '/../../../../../temp']);
 		$mPDF->WriteHTML((string)$this->template);
 
 		$result = $mPDF->Output($name, $dest);
